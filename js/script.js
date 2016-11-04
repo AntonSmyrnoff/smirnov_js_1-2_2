@@ -1,14 +1,14 @@
 
   var names = [];
   for (var i = 0; i < 5; i++) {
-     names[i] = prompt('Имя №' + (i+1) + ' из списка')
+     names[i] = prompt('Имя №' + (i+1) + ' из списка') // "Циклом заполнить массив с помощью команды prompt в котором будет список из 5-ти любых имен"
   }
 
-  var user = prompt('Введите имя пользователя');
-  if (userCheck(user, names) == 0) {alert ('Ошибка. Данного пользователя не существует')}
-  else {alert ('Вы успешно вошли, ' + userCheck(user, names))}
+  var user = prompt('Введите имя пользователя'); // "вывести с помощью prompt сообщение с просьбой ввести имя пользователя"
+  if (userCheck(user, names) == 0) {alert ('Ошибка. Данного пользователя не существует')} // "Если нет совпадения — выдавать с помощью alert сообщение об ошибке"
+  else {alert ('Вы успешно вошли, ' + userCheck(user, names))} // "Если есть совпадение — выводить сообщение «Андрей, вы успешно вошли». Вместо «Андрей» должно быть имя текущего пользователя"
 
-  function userCheck(login, arr) {
+  function userCheck(login, arr) { // "Введенное имя, циклом сравнивать с именами в массиве"
     var result = 0;
     for (var i = 0; i < arr.length; i++) {
     	if (login == arr[i]) {
@@ -18,8 +18,6 @@
   return result
   }  
 
-  if (userCheck(user, names) == 0) {alert ('Ошибка. Данного пользователя не существует')}
-  	else {alert ('Вы успешно вошли, ' + userCheck(user, names))}
   	
 
 
